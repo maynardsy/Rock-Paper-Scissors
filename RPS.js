@@ -25,7 +25,7 @@ function win(userChoice, computerChoice){
     userScore++; 
     userScore_span.innerHTML = userScore; 
     computerScore_span.innerHTML = computerScore; 
-    result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + " You win!"
+    result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + "<br> You win!"
     document.getElementById(userChoice).classList.add('green-glow'); 
     setTimeout(function() {document.getElementById(userChoice).classList.remove('green-glow') }, 3000)
 }
@@ -34,14 +34,14 @@ function lose(userChoice, computerChoice){
     computerScore++; 
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore; 
-    result_p.innerHTML = convertToWord(userChoice) + " loses " + convertToWord(computerChoice) + " You lose!" 
+    result_p.innerHTML = convertToWord(userChoice) + " loses " + convertToWord(computerChoice) + "<br> You lose!" 
     document.getElementById(userChoice).classList.add('red-glow'); 
     setTimeout(function() {document.getElementById(userChoice).classList.remove('red-glow') }, 1000)
 
 
 }
 function draw(userChoice, computerChoice){ 
-    result_p.innerHTML = convertToWord(userChoice) + " ties " + convertToWord(computerChoice) + " You tie!" 
+    result_p.innerHTML = convertToWord(userChoice) + " ties " + convertToWord(computerChoice) + "<br> You tie!" 
     document.getElementById(userChoice).classList.add('grey-glow'); 
     setTimeout(function() {document.getElementById(userChoice).classList.remove('grey-glow') }, 1000)
 
